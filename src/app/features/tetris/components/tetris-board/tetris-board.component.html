@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="grid">
+    <canvas #canvas class="tetris-board"></canvas>
+  </div>
+  <div class="info-panel">
+    <div>
+      <p>Score: {{ board.score }}</p>
+      <p>Lines: {{ board.lines }}</p>
+      <div>
+        <canvas #next></canvas>
+      </div>
+    </div>
+    <button (click)="start()">
+      {{ inProgress ? "Restart" : "Start" }}
+    </button>
+  </div>
+</div>

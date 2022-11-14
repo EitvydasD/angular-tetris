@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.info-panel {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tetris-board {
+  border: solid 2px;
+}
+
+button {
+  background-image: linear-gradient(45deg, #48ff00, #088b04);
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+p,
+button {
+  font-size: 16px;
+}

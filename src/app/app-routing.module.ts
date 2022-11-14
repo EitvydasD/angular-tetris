@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'tetris',
+    loadChildren: () =>
+      import('./features/tetris/tetris.module').then((m) => m.TetrisModule),
+  },
+  { path: '**', redirectTo: 'tetris' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
