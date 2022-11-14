@@ -52,12 +52,10 @@ export class TetrisBoardComponent implements OnInit {
     }
 
     event.preventDefault();
-    // Get new state
     const action = Actions.getActionFromEvent(event);
     let piece = action.execute(this.piece);
 
     if (Actions.isSpaceKey(event)) {
-      // Hard drop
       while (this.board.isValidPiece(piece)) {
         this.board.score += Points.HARD_DROP;
         this.piece.move(piece);
